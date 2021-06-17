@@ -1,0 +1,30 @@
+<section id="galleryData">
+  <article>
+    <div class="grid-container">
+      {{#each gallery}}
+        <main class="gallery_card">
+          <header class="gallery_header">
+            {{#if (mimetype this.photo.0.mimetype)}}
+              <video>
+                <source src="{{slice photo.0.path}}" />
+              </video>
+            {{else}}
+              <img src="{{slice photo.0.path}}" alt="image" />
+            {{/if}}
+          </header>
+          <main class="gallery_content">
+            <h2>{{photo_name}}</h2>
+            {{!-- <p class="para">{{photo_description}}</p> --}}
+            <p>
+              <strong>
+                Uploaded By
+              </strong>
+              :
+              {{user.0.username}}
+            </p>
+          </main>
+        </main>
+      {{/each}}
+    </div>
+  </article>
+</section>

@@ -1,0 +1,19 @@
+{{#if SUCCESS_MESSAGE}}
+  <div class="alert alert-success">
+    {{SUCCESS_MESSAGE}}
+  </div>
+{{/if}}
+
+{{#if ERROR_MESSAGE}}
+  <div class="alert alert-danger">
+    {{ERROR_MESSAGE}}
+  </div>
+{{/if}}
+
+<section id="errors">
+  {{#if error}}
+    <div class="alert alert-danger">
+      {{error}}
+    </div>
+  {{/if}}
+</section>

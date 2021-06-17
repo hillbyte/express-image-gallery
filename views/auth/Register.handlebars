@@ -1,0 +1,29 @@
+<section id="galleryBlock">
+  <article>
+    <h2>Register Profile</h2>
+    {{#each error}}
+      <p class="error">{{text}}</p>
+    {{/each}}
+    <form action="/auth/register" method="POST">
+      <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="form-group">
+        <label for="">Confirm Password</label>
+        <input type="c_password" name="c_password" id="c_password" />
+      </div>
+      <div class="form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>
+  </article>
+</section>
